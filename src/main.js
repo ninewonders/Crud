@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import App from '@/App.vue'
 
+
+//login page import
+import login from '@/components/LoginVue.vue'
+
 //main page import
 import index from '@/components/Tables-View.vue'
 
@@ -42,8 +46,13 @@ Vue.config.productionTip = false
 //routers
 const routes = [
   {
-    name:'index',
+    name:'login',
     path:'/',
+    component: login
+  },
+  {
+    name:'index',
+    path:'/index',
     component: index
   },
   //patient 

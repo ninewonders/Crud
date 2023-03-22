@@ -17,7 +17,9 @@
         <td>{{item.PRENOM}}</td>
         <td>{{item.GENRE}}</td>
         <td>{{item.DATE_NAISSANCE}}</td>
-        <td><router-link :to="{ name: 'editpatient', params:{id:item.id} }" class="btn btn-primary">Modifier</router-link>  <button type="button" class="btn btn-danger" @click="deletePatient(item.id)">Supprimer</button></td>
+        <td>
+          <router-link :to="{ name: 'editpatient', params:{id:item.id} }" class="btn btn-primary">Modifier</router-link>  
+          <button type="button" class="btn btn-danger" @click="deletePatient(item.id)">Supprimer</button></td>
       </tr>
     </tbody>
   </table>
@@ -42,7 +44,7 @@
         try {
           const response = await axios.get("http://127.0.0.1:8000/api/patient");
           this.items = response.data;
-        } catch (error) {
+        } catch (error) { 
           console.log(error);
         }
       },
