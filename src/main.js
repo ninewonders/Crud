@@ -2,8 +2,6 @@ import Vue from 'vue'
 import App from '@/App.vue'
 
 
-//login page import
-import login from '@/components/LoginVue.vue'
 
 //main page import
 import index from '@/components/Tables-View.vue'
@@ -38,6 +36,11 @@ import med from '@/components/Medicament/ListMed'
 import createmed from '@/components/Medicament/AddMed'
 import editmed from '@/components/Medicament/EditMed'
 
+//crud pages for rendez vous imports
+import rdv from '@/components/rendez_vous/ListRdv.vue'
+import createrdv from '@/components/rendez_vous/AddRdv.vue'
+import editrdv from '@/components/rendez_vous/EditRdv.vue'
+
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -46,13 +49,8 @@ Vue.config.productionTip = false
 //routers
 const routes = [
   {
-    name:'login',
-    path:'/',
-    component: login
-  },
-  {
     name:'index',
-    path:'/index',
+    path:'/',
     component: index
   },
   //patient 
@@ -150,6 +148,22 @@ const routes = [
     name:'editmed',
     path:'/med/editmed/:id',
     component: editmed,
+  },
+  //rendez vous
+  {
+    name:'rdv',
+    path:'/rdv',
+    component: rdv,
+  },
+  {
+    name:'createrdv',
+    path:'/rdv/createrdv',
+    component: createrdv,
+  },
+  {
+    name:'editrdv',
+    path:'/rdv/editrdv/:id',
+    component: editrdv,
   }
 ];
 

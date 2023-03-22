@@ -43,7 +43,7 @@ export default{
         this.name = response.data.patient.PRENOM;
         this.gender  = response.data.patient.GENRE;
         this.birthday = response.data.patient.DATE_NAISSANCE;
-        console.log(response);
+        console.log(this.array)
       } catch (error) {
         console.log(error);
       }
