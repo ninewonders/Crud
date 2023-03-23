@@ -39,6 +39,11 @@ import rdv from "@/components/rendez_vous/ListRdv.vue";
 import createrdv from "@/components/rendez_vous/AddRdv.vue";
 import editrdv from "@/components/rendez_vous/EditRdv.vue";
 
+//crud pages for service imports
+import ser from "@/components/Service/ListSer";
+import createser from "@/components/Service/AddSer";
+import editser from "@/components/Service/EditSer";
+
 import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
@@ -162,6 +167,22 @@ const routes = [
     name: "editrdv",
     path: "/rdv/editrdv/:id",
     component: editrdv,
+  },
+  //service
+  {
+    name: "ser",
+    path: "/ser",
+    component: ser,
+  },
+  {
+    name: "createser",
+    path: "/ser/createser",
+    component: createser,
+  },
+  {
+    name: "editser",
+    path: "/ser/editser/:id",
+    component: editser,
   },
 ];
 

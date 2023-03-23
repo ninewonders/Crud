@@ -7,5 +7,6 @@
     <router-link :to="{ name: 'cert' }">Certificat medical</router-link><br />
     <router-link :to="{ name: 'med' }">Medicament</router-link><br />
     <router-link :to="{ name: 'rdv' }">Rendez Vous</router-link>
+    <router-link :to="{ name: 'ser' }">Service</router-link>
   </div>
 </template>
