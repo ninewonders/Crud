@@ -1,6 +1,10 @@
 import Vue from "vue";
 import App from "@/App.vue";
 
+// make jw pagination component available in application
+import JwPagination from "jw-vue-pagination";
+Vue.component("jw-pagination", JwPagination);
+
 //main page import
 import index from "@/components/Tables-View.vue";
 
